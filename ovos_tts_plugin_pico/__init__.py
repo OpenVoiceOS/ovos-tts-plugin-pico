@@ -1,8 +1,8 @@
 import subprocess
 import wave
 from distutils.spawn import find_executable
-
 from ovos_plugin_manager.templates.tts import TTS, TTSValidator
+from ovos_utils import classproperty
 
 
 def get_voice_from_lang(lang):
@@ -72,8 +72,8 @@ class PicoTTS(TTS):
             wav_file = self.get_picotts(sentence, wav_file, voice)
         return wav_file, None
 
-    @property
-    def available_languages(self) -> set:
+    @classproperty
+    def available_languages(cls) -> set:
         """Return languages supported by this TTS implementation in this state
         This property should be overridden by the derived class to advertise
         what languages that engine supports.
