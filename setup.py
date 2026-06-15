@@ -14,6 +14,7 @@ setup(
     license='Apache-2.0',
     packages=['ovos_tts_plugin_pico'],
     install_requires=['ovos-plugin-manager>=0.0.1a12'],
+    extras_require={'test': ['ovoscope[tts]', 'pytest']},
     zip_safe=True,
     include_package_data=True,
     classifiers=[
