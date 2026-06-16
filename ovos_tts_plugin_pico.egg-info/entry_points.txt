@@ -1,5 +1,0 @@
-[opm.tts]
-ovos-tts-plugin-pico = ovos_tts_plugin_pico:PicoTTS
-
-[opm.tts.config]
-ovos-tts-plugin-pico.config = ovos_tts_plugin_pico:PicoTTSPluginConfig
