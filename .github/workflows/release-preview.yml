@@ -11,3 +11,4 @@ jobs:
     secrets: inherit
     with:
       package_name: 'ovos_tts_plugin_pico'
+      version_file: 'ovos_tts_plugin_pico/version.py'
