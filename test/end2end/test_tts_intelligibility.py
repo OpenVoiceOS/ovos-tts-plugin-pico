@@ -6,6 +6,7 @@ rate stays within tolerance. The pico2wave binary is provided by the
 ``libttspico-utils`` system package (installed in CI).
 """
 import os
+import json
 
 from ovoscope.tts_intelligibility import score_tts_intelligibility
 
@@ -24,5 +25,5 @@ PHRASES = [
 def test_tts_intelligibility():
     tts = PicoTTS()
     report = score_tts_intelligibility(tts, PHRASES, lang=LANG)
-    print(f"::TTS-INTELLIGIBILITY:: {report.to_dict()}")
+    print("::TTS-INTELLIGIBILITY:: " + json.dumps(report.to_dict()))
     assert report.mean_wer <= float(os.environ.get("TTS_MAX_WER", "1.0"))
