@@ -1,16 +1,22 @@
-FROM ubuntu:latest
+FROM ubuntu:24.04
 
-ENV TERM linux
-ENV DEBIAN_FRONTEND noninteractive
+ENV TERM=linux
+ENV DEBIAN_FRONTEND=noninteractive
 
 RUN apt-get update && \
-  apt-get install -y git python3 python3-dev python3-pip portaudio19-dev curl build-essential libttspico0 libttspico-utils
+  apt-get install -y --no-install-recommends \
+    git python3 python3-dev python3-venv python3-pip \
+    build-essential curl \
+    libttspico0 libttspico-utils && \
+  rm -rf /var/lib/apt/lists/*
 
-RUN pip3 install ovos-utils==0.0.15
-RUN pip3 install ovos-plugin-manager==0.0.4
-RUN pip3 install ovos-tts-server==0.0.2
+# Use a venv so pip installs are not blocked by PEP 668 (externally-managed-environment).
+RUN python3 -m venv /opt/venv
+ENV PATH="/opt/venv/bin:$PATH"
+
+RUN pip install --no-cache-dir ovos-tts-server
 
 COPY . /tmp/ovos-tts-plugin-pico
-RUN pip3 install /tmp/ovos-tts-plugin-pico
+RUN pip install --no-cache-dir /tmp/ovos-tts-plugin-pico
 
 ENTRYPOINT ovos-tts-server --engine ovos-tts-plugin-pico

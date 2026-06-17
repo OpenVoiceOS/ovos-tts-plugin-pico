@@ -61,8 +61,10 @@ class PicoTTS(TTS):
 
         return wav_file
 
-    def get_tts(self, sentence, wav_file, lang=None):
-        if lang:
+    def get_tts(self, sentence, wav_file, lang=None, voice=None, **kwargs):
+        if voice and voice != "default":
+            pass  # caller-supplied pico voice wins
+        elif lang:
             voice = get_voice_from_lang(lang) or self.voice
         else:
             voice = self.voice
