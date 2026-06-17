@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.0.4a3](https://github.com/OpenVoiceOS/ovos-tts-plugin-pico/tree/0.0.4a3) (2026-06-17)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-tts-plugin-pico/compare/0.0.4a2...0.0.4a3)
+
+**Merged pull requests:**
+
+- test: add TTS intelligibility e2e \(ovoscope\) [\#21](https://github.com/OpenVoiceOS/ovos-tts-plugin-pico/pull/21) ([JarbasAl](https://github.com/JarbasAl))
+
 ## [0.0.4a2](https://github.com/OpenVoiceOS/ovos-tts-plugin-pico/tree/0.0.4a2) (2026-06-16)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-tts-plugin-pico/compare/214d62372761077d601be87be03d7f0846120cca...0.0.4a2)
