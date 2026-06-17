@@ -25,7 +25,9 @@ class PicoTTS(TTS):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs, audio_ext="wav",
                          validator=PicoTTSValidator(self))
-        if not self.voice:
+        # the TTS base class defaults voice to the literal "default", which is
+        # not a valid pico language; derive the real voice from lang in that case
+        if not self.voice or self.voice == "default":
             self.voice = get_voice_from_lang(self.lang)
 
         # TODO support speed and pitch for nanotts
