@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.1.0a1](https://github.com/OpenVoiceOS/ovos-tts-plugin-pico/tree/0.1.0a1) (2026-07-15)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-tts-plugin-pico/compare/0.0.4a3...0.1.0a1)
+
+**Merged pull requests:**
+
+- feat: serve pico via ovos-tts-server docker image [\#26](https://github.com/OpenVoiceOS/ovos-tts-plugin-pico/pull/26) ([JarbasAl](https://github.com/JarbasAl))
+
 ## [0.0.4a3](https://github.com/OpenVoiceOS/ovos-tts-plugin-pico/tree/0.0.4a3) (2026-06-17)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-tts-plugin-pico/compare/0.0.4a2...0.0.4a3)
