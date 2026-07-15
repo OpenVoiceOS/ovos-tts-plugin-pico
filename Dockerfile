@@ -34,7 +34,9 @@ RUN pip install --no-cache-dir --upgrade pip \
 # Default voice/language, overridable with the PICO_VOICE build arg. Valid values:
 # de-DE, en-GB, en-US, es-ES, fr-FR, it-IT.
 ARG PICO_VOICE=en-US
-RUN useradd -m -u 1000 ovos \
+# ubuntu:24.04 ships a default "ubuntu" user at uid 1000; drop it so we can own that uid.
+RUN userdel -r ubuntu 2>/dev/null || true \
+    && useradd -m -u 1000 ovos \
     && mkdir -p /home/ovos/.config/mycroft \
     && printf '{\n  "tts": {\n    "module": "ovos-tts-plugin-pico",\n    "ovos-tts-plugin-pico": {\n      "voice": "%s"\n    }\n  }\n}\n' "${PICO_VOICE}" \
         > /home/ovos/.config/mycroft/mycroft.conf \
