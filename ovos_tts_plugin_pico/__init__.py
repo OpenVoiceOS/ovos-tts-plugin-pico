@@ -1,6 +1,7 @@
 import subprocess
 import wave
 from distutils.spawn import find_executable
+
 from ovos_plugin_manager.templates.tts import TTS, TTSValidator
 from ovos_utils import classproperty
 
@@ -89,7 +90,7 @@ class PicoTTS(TTS):
 
 class PicoTTSValidator(TTSValidator):
     def __init__(self, tts):
-        super(PicoTTSValidator, self).__init__(tts)
+        super().__init__(tts)
 
     def validate_lang(self):
         voices = ['de-DE', 'en-GB', 'en-US', 'es-ES', 'fr-FR', 'it-IT']

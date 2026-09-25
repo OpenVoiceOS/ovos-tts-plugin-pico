@@ -5,8 +5,8 @@ audio back with the ovoscope reference STT, and asserts the mean word error
 rate stays within tolerance. The pico2wave binary is provided by the
 ``libttspico-utils`` system package (installed in CI).
 """
-import os
 import json
+import os
 
 from ovoscope.tts_intelligibility import score_tts_intelligibility
 
