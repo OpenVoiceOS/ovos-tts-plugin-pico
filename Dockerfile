@@ -7,7 +7,7 @@
 # pico2wave ships in Ubuntu's libttspico-utils package (not in python:3.11-slim's
 # debian base), so this image is built on ubuntu:24.04 with a venv to sidestep
 # PEP 668 (externally-managed-environment).
-FROM ubuntu:24.04
+FROM ubuntu:26.04
 
 ENV TERM=linux
 ENV DEBIAN_FRONTEND=noninteractive
