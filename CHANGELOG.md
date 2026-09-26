@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.1.0a3](https://github.com/OpenVoiceOS/ovos-tts-plugin-pico/tree/0.1.0a3) (2026-09-26)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-tts-plugin-pico/compare/0.1.0a2...0.1.0a3)
+
+**Merged pull requests:**
+
+- ci: update the action actionlint reports as too old [\#35](https://github.com/OpenVoiceOS/ovos-tts-plugin-pico/pull/35) ([openvoiceos-bot](https://github.com/openvoiceos-bot))
+
 ## [0.1.0a2](https://github.com/OpenVoiceOS/ovos-tts-plugin-pico/tree/0.1.0a2) (2026-08-01)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-tts-plugin-pico/compare/0.1.0a1...0.1.0a2)
