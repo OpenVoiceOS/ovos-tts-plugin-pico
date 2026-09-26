@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.1.0a5](https://github.com/OpenVoiceOS/ovos-tts-plugin-pico/tree/0.1.0a5) (2026-09-26)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-tts-plugin-pico/compare/0.1.0a4...0.1.0a5)
+
+**Merged pull requests:**
+
+- Update ubuntu Docker tag to v26 [\#24](https://github.com/OpenVoiceOS/ovos-tts-plugin-pico/pull/24) ([renovate[bot]](https://github.com/apps/renovate))
+
 ## [0.1.0a4](https://github.com/OpenVoiceOS/ovos-tts-plugin-pico/tree/0.1.0a4) (2026-09-26)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-tts-plugin-pico/compare/0.1.0a3...0.1.0a4)
