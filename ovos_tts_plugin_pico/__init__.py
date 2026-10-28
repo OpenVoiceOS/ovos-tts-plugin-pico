@@ -96,13 +96,13 @@ class PicoTTSValidator(TTSValidator):
         lang = self.tts.lang.split("-")[0].lower().strip()
         supported = [v.split("-")[0].lower().strip() for v in voices]
         if lang not in supported:
-            raise Exception('PicoTTS only supports ' + str(voices))
+            raise ValueError('PicoTTS only supports ' + str(voices))
 
     def validate_connection(self):
         if not find_executable("pico2wave") and \
                 not find_executable("pico-tts") and \
                 not find_executable("nanotts"):
-            raise Exception(
+            raise RuntimeError(
                 'PicoTTS is not installed. Run: '
                 '\nsudo apt-get install libttspico0\n'
                 'sudo apt-get install  libttspico-utils')
