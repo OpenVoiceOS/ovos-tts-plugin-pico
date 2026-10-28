@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.1.1a1](https://github.com/OpenVoiceOS/ovos-tts-plugin-pico/tree/0.1.1a1) (2026-10-28)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-tts-plugin-pico/compare/0.1.0a5...0.1.1a1)
+
+**Merged pull requests:**
+
+- fix: raise a typed exception from the validator, not a bare one [\#36](https://github.com/OpenVoiceOS/ovos-tts-plugin-pico/pull/36) ([openvoiceos-bot](https://github.com/openvoiceos-bot))
+
 ## [0.1.0a5](https://github.com/OpenVoiceOS/ovos-tts-plugin-pico/tree/0.1.0a5) (2026-09-26)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-tts-plugin-pico/compare/0.1.0a4...0.1.0a5)
