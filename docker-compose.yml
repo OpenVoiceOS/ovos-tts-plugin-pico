@@ -1,0 +1,16 @@
+services:
+  pico-tts:
+    image: ghcr.io/openvoiceos/ovos-tts-plugin-pico:latest
+    # …or build locally: build: .
+    container_name: pico-tts
+    restart: unless-stopped
+    ports:
+      - "9666:9666"
+    # optional: override the served voice
+    # (voice is a build arg; rebuild with --build-arg PICO_VOICE=de-DE)
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:9666/status')"]
+      interval: 60s
+      timeout: 10s
+      retries: 3
+      start_period: 30s

@@ -1,0 +1,54 @@
+[build-system]
+requires = ["setuptools>=61", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ovos-tts-plugin-pico"
+dynamic = ["version"]
+description = "pico tts plugin for mycroft"
+license = {text = "Apache-2.0"}
+authors = [
+    {name = "JarbasAi", email = "jarbasai@mailfence.com"}
+]
+keywords = ["mycroft", "OpenVoiceOS", "OVOS", "chatterbox", "plugin", "tts"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Topic :: Text Processing :: Linguistic",
+    "License :: OSI Approved :: Apache Software License",
+    "Programming Language :: Python :: 2",
+    "Programming Language :: Python :: 2.7",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.0",
+    "Programming Language :: Python :: 3.1",
+    "Programming Language :: Python :: 3.2",
+    "Programming Language :: Python :: 3.3",
+    "Programming Language :: Python :: 3.4",
+    "Programming Language :: Python :: 3.5",
+    "Programming Language :: Python :: 3.6",
+]
+dependencies = [
+    "ovos-plugin-manager>=2.1.0,<3.0.0",
+]
+
+[project.optional-dependencies]
+test = [
+    "ovoscope[tts]",
+    "pytest",
+]
+
+[project.urls]
+Homepage = "https://github.com/OpenVoiceOS/ovos-tts-plugin-pico"
+
+[project.entry-points."opm.tts"]
+"ovos-tts-plugin-pico" = "ovos_tts_plugin_pico:PicoTTS"
+
+[project.entry-points."opm.tts.config"]
+"ovos-tts-plugin-pico.config" = "ovos_tts_plugin_pico:PicoTTSPluginConfig"
+
+[tool.setuptools.dynamic]
+version = {attr = "ovos_tts_plugin_pico.version.__version__"}
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["ovos_tts_plugin_pico*"]
