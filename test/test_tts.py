@@ -1,7 +1,7 @@
 import os
-import wave
 import tempfile
 import unittest
+import wave
 
 from ovos_tts_plugin_pico import PicoTTS, get_voice_from_lang
 
